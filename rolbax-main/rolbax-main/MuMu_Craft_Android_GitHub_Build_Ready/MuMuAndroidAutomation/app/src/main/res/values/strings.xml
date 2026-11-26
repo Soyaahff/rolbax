@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="accessibility_service_description">Allows the automation app to tap configured screen locations</string>
-</resources>
