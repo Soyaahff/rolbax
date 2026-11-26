@@ -4,7 +4,8 @@ name: Build Android APK
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -27,11 +28,11 @@ jobs:
 
       - name: Build APK
         run: |
-          cd MuMu_Craft_Android_GitHub_Build_Ready
+          cd MuMu_Craft_Android_GitHub_Build_Ready/MuMuAndroidAutomation
           gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MuMu-Craft-Automation-APK
-          path: MuMu_Craft_Android_GitHub_Build_Ready/app/build/outputs/apk/debug/app-debug.apk
+          path: MuMu_Craft_Android_GitHub_Build_Ready/MuMuAndroidAutomation/app/build/outputs/apk/debug/app-debug.apk
